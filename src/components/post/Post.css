@@ -1,0 +1,77 @@
+* {
+    transition: 0.2s;
+}
+
+.object {
+    background-color: #e2e2e2;
+    border: 2px solid #000000;
+    border-radius: 0 10px 0 10px;
+    margin: 10px 10px 30px 10px;
+    width: 20vw;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.post {
+    width: 20vw;
+    height: 50vh;
+    overflow: auto;
+}
+
+.post_title {
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #e2e2e2, black, #e2e2e2) 1;
+    padding: 10px 0;
+}
+
+.post_info {
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.post_image {
+    width: 19vw;
+}
+
+.post_buttons {
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, #e2e2e2, black, #e2e2e2) 1;
+    padding: 10px 0;
+}
+
+.post_delete, .post_edit  {
+    outline: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin: 0 30px;
+}
+
+.post_edit {
+    float: right;
+}
+
+.post_delete {
+    float: left;
+}
+
+.post_delete_img, .post_edit_img {
+    width: 30px;
+}
+
+.post_block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comments_container {
+    display: none;
+    flex-direction: column;
+    height: 400px;
+    overflow: auto;
+    width: 50%;
+}

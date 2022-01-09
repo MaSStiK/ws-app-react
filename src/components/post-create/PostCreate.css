@@ -1,0 +1,31 @@
+.create {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.agree {
+    outline: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 0;
+    display: none;
+}
+
+.agree_img {
+    width: 50px;
+}
+
+.group {
+    margin: 50px;
+}
+
+.button_accept {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
