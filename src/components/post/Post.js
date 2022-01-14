@@ -1,6 +1,7 @@
 import './Post.css'
 import React, { useState, useRef } from 'react';
 import cross_img from '../../media/cross.png'
+import full_img from '../../media/full.png'
 import edit_img from '../../media/edit.png'
 import Comment from '../comments/Comment';
 
@@ -54,12 +55,12 @@ function Post(props) {
                 console.log(error);
             }
         );
+        document.querySelector("#object_" + post_id).style.display = "none"
     }
 
     const commentAdd = async (post_id) => {
         
         const commentValue = commentInput.current.value;
-        console.log(commentValue)
 
         if (!commentValue) {
             return;
@@ -88,7 +89,6 @@ function Post(props) {
 
         if (commentInputValue.trim().length > 0) {
             setIsDisabled(false);
-            console.log(1)
         }
         else {
             setIsDisabled(true);
@@ -97,7 +97,7 @@ function Post(props) {
 
     return (
         <React.Fragment>
-            <div onClick={() => watchFull(post.id)} id={"object_" + post.id} className="object">
+            <div id={"object_" + post.id} className="object">
                 <div className="post_title"><center>{post.post_title}</center></div>
                 <div className="post_block">
                     <div id={"post_" + post.id} className="post">
@@ -121,12 +121,9 @@ function Post(props) {
                     </div>
                 </div>
                 <div className="post_buttons">
-                    <button onClick={() => deletePost(post.id)} id={"delete_" + post.id} className="post_delete">
-                        <img className="post_delete_img" src={cross_img} alt="cross"/>
-                    </button>
-                    <button  id={"edit_" + post.id} className="post_edit">
-                        <img className="post_edit_img" src={edit_img} alt="edit"/>
-                    </button>
+                    <input onClick={() => deletePost(post.id)} type="image" src={cross_img} id={"delete_" + post.id} className="delete_post" alt="delete"/>
+                    {/* <input onClick={() => watchFull(post.id)} type="image" src={edit_img} id={"edit_" + post.id} className="edit_post" alt="edit"/> */}
+                    <input onClick={() => watchFull(post.id)} type="image" src={full_img} id={"full_" + post.id} className="full_post" alt="full"/>
                 </div>
             </div>            
         </React.Fragment>

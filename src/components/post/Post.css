@@ -9,7 +9,6 @@
     margin: 10px 10px 30px 10px;
     width: 20vw;
     z-index: 1;
-    cursor: pointer;
 }
 
 .post {
@@ -37,35 +36,31 @@
 }
 
 .post_buttons {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-content: center;
     border-top: 2px solid transparent;
     border-image: linear-gradient(90deg, #e2e2e2, black, #e2e2e2) 1;
     padding: 10px 0;
 }
 
-.post_delete, .post_edit  {
-    outline: none;
-    border: 0;
-    background: transparent;
+.delete_post, .edit_post, .full_post  {
     cursor: pointer;
-    position: relative;
     margin: 0 30px;
-}
-
-.post_edit {
-    float: right;
-}
-
-.post_delete {
-    float: left;
-}
-
-.post_delete_img, .post_edit_img {
-    width: 30px;
+    width: 30;
+    height: 30px;
 }
 
 .post_block {
     display: flex;
     justify-content: space-around;
+}
+
+.comment_add {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .comments_container {
